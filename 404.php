@@ -2,11 +2,11 @@
 
 define('Title','Wolfy1339');
 // External resources
-   define('FONT_AWESOME', '/bootstrap/css/font-awesome.min.css');
-   define('BOOTSTRAP', '/bootstrap/css/bootstrap.min.css');
-   define('BOOTSTRAP_THEME', '/bootstrap/css/bootstrap-theme.min.css');
-   define('JQUERY', '/bootstrap/js/jquery.min.js');
-   define('BOOTSTRAPJS', '/bootstrap/js/bootstrap.min.js');
+   define('FONT_AWESOME', '/Resources/css/font-awesome.min.css');
+   define('BOOTSTRAP', '/Resources/css/bootstrap.min.css');
+   define('BOOTSTRAP_THEME', '/Resources/css/bootstrap-theme.min.css');
+   define('JQUERY', '/Resources/js/jquery.min.js');
+   define('BOOTSTRAPJS', '/Resources/js/bootstrap.min.js');
 
 // Browser and Device Icons
           define('FAV_ICON', '//wolfy1339.tk/img/favicon.png'); // 16x16 or 32x32 
