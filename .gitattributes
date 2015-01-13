@@ -20,3 +20,7 @@
 *.exe binary
 *.deb binary
 powder* binary
+*.gz binary
+*.eot binary
+*.woff binary
+*.ttf binary
