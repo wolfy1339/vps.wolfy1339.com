@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /private
+Disallow: /private/
+Disallow: /Error.log
+Disallow: /index_original.php
+Disallow: /README.md
+Disallow: /.git/
+Disallow: /.git
+Disallow: /.gitignore
+Disallow: /~wolfy1339/app
+Disallow: /~wolfy1339/app/

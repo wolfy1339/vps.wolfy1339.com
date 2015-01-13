@@ -26,10 +26,10 @@ define('IPHONE_ICON_RETINA', ''); // 114x114
           define('OG_IMAGE', ''); 
 
 //Error Code & message
-define('ERROR_CODE', '404');
-define('ERROR_NAME', 'Not found');
+define('ERROR_CODE', '401');
+define('ERROR_NAME', 'Unauthorized');
+define('ERROR_MESSAGE',"We couldn't verify that you are authorized to access the document requested.");
 define('ERROR_OOPS', 'Sorry');
-define('ERROR_MESSAGE', "I couldn't find a page at this point");
 define('ICON', 'fa-frown-o fa-lg');
 define('ALERT', 'alert-danger');
 
@@ -51,7 +51,6 @@ $this_script = basename(__FILE__);
 
 $home = "<i class=\"fa fa-home fa-lg fa-fw\"></i> ";
 $version = apache_get_version();
-
 
 /*** HTML LOGIC ***/
 //Footer URL

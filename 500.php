@@ -3,13 +3,13 @@
 define('Title','Wolfy1339');
 // External resources
    define('FONT_AWESOME', '/Resources/css/font-awesome.min.css');
-   define('BOOTSTRAP', '/Resources/css/bootstrap.min.css');
-   define('BOOTSTRAP_THEME', '/Resources/css/bootstrap-theme.min.css');
+   define('BOOTSTRAP', '/Resources/css/m8tro-blue.min.css');
+   //define('BOOTSTRAP_THEME', '/Resources/css/bootstrap-theme.min.css');
    define('JQUERY', '/Resources/js/jquery.min.js');
    define('BOOTSTRAPJS', '/Resources/js/bootstrap.min.js');
 
 // Browser and Device Icons
-          define('FAV_ICON', '//wolfy1339.tk/img/favicon.png'); // 16x16 or 32x32 
+          define('FAV_ICON', '//wolfy1339.tk/img/favicon48.png'); // 16x16 or 32x32 
        define('IPHONE_ICON', ''); // 57x57
 define('IPHONE_ICON_RETINA', ''); // 114x114
          define('IPAD_ICON', ''); // 72x72
@@ -27,9 +27,9 @@ define('IPHONE_ICON_RETINA', ''); // 114x114
 
 //Error Code & message
 define('ERROR_CODE', '500');
-define('ERROR_MESSAGE', 'Internal Server Error');
+define('ERROR_NAME', 'Internal Server Error');
 define('ERROR_OOPS', 'Oops');
-define('ERROR_MESSAGE_ALERT', "an error happened and I couldn't display the page");
+define('ERROR_MESSAGE', "An error happened and I couldn't display the page");
 define('ICON', 'fa-frown-o fa-lg');
 define('ALERT', 'alert-warning');
 
@@ -66,7 +66,7 @@ $header = $header."  <meta name=\"viewport\" content=\"width=device-width, initi
 $header = $header."  <meta name=\"generator\" content=\"Bootstrap Listr\" />" . PHP_EOL;
 $header = $header."  <title>".Title." &middot; Error ".ERROR_CODE."</title>" . PHP_EOL;
 $header = $header."  <link rel=\"stylesheet\" href=\"".BOOTSTRAP."\" />" . PHP_EOL;
-$header = $header."  <link rel=\"stylesheet\" href=\"".BOOTSTRAP_THEME."\" />" . PHP_EOL;
+//$header = $header."  <link rel=\"stylesheet\" href=\"".BOOTSTRAP_THEME."\" />" . PHP_EOL;
 $header = $header."  <link rel=\"stylesheet\" href=\"".FONT_AWESOME."\" />" . PHP_EOL;
 if (FAV_ICON) $header = $header."  <link rel=\"shortcut icon\" href=\"".FAV_ICON."\" />" . PHP_EOL;
 if (IPHONE_ICON) $header = $header."  <link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"".IPHONE_ICON."\" />" . PHP_EOL;
@@ -83,9 +83,9 @@ if (OG_TYPE) $header = $header."  <meta property=\"og:type\" content=\"".OG_TYPE
 if (OG_IMAGE) $header = $header."  <meta property=\"og:image\" content=\"".OG_IMAGE."\" />" . PHP_EOL;
 $intro = null;
 $intro = $intro."    <p>You tried to access ".$_SERVER['REQUEST_URI']."</p>" . PHP_EOL;
-$error = "<strong>".ERROR_OOPS.",</strong> ".ERROR_MESSAGE_ALERT." <i class=\"fa fa-fw ".ICON ."\"></i>" . PHP_EOL;
+$error = "<strong>".ERROR_OOPS.",</strong> ".ERROR_MESSAGE." <i class=\"fa fa-fw ".ICON ."\"></i>" . PHP_EOL;
 $error_container = "    <div class=\"alert ".ALERT."\">".$error."</div>" . PHP_EOL;
-$h1 = "    <h1>".ERROR_CODE." - ".ERROR_MESSAGE."</h1>" .PHP_EOL;
+$h1 = "    <h1>".ERROR_CODE." - ".ERROR_NAME."</h1>" .PHP_EOL;
 ?>
 
 
@@ -93,6 +93,7 @@ $h1 = "    <h1>".ERROR_CODE." - ".ERROR_MESSAGE."</h1>" .PHP_EOL;
 <html>
 <head>
   <?php echo $header?>
+  <style>strong{font-weight:500;}.alert .fa{color:inherit;}</style>
 </head>
 <body>
   <div class="container">
