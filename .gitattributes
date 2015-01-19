@@ -23,4 +23,6 @@ powder* binary
 *.gz binary
 *.eot binary
 *.woff binary
+*.woff binary
+*.otf binary
 *.ttf binary
