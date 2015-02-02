@@ -9,7 +9,7 @@ if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
     $ip = ip2long($_SERVER['REMOTE_ADDR']);
 }
 if ($ip >= $ip_low && $ip <= $ip_high) {
-    shell_exec("cd /var/www && /usr/bin/git pull");
+    shell_exec("cd /var/www && /usr/bin/git pull 2>&1");
 }
 else {
     include '403.php';
