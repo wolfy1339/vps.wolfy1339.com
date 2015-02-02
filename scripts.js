@@ -8,7 +8,7 @@ $(".highlight").click(function (c) {
     $("pre").css("background-color", b);
 });
 
-$("modal").on("hidden.bs.modal", function () {
+$(".modal").on("hidden.bs.modal", function () {
     $("highlight").removeAttr("disabled");
 });
 
