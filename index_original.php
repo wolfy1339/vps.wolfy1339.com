@@ -274,7 +274,7 @@ if (CUSTOM_THEME) {
     } else if (BOOTSTRAP_THEME == "m8tro") {
         $bootstrap_cdn = '//cdnjs.cloudflare.com/ajax/libs/m8tro-bootstrap/'.BOOTSTRAP_VERSION.'/m8tro.min.css';
     } else {
-        $bootstrap_cdn = '//Resources/css/m8tro-blue.min.css';
+        $bootstrap_cdn = '/Resources/css/m8tro-blue.min.css';
     }
 }
 
@@ -595,8 +595,7 @@ if (ANALYTICS_ID) {
     $footer    .= "  <script type=\"text/javascript\">var _gaq=_gaq||[];_gaq.push([\"_setAccount\",\"".ANALYTICS_ID."\"]);_gaq.push([\"_trackPageview\"]);(function(){var ga=document.createElement(\"script\");ga.type=\"text/javascript\";ga.async=true;ga.src=(\"https:\"==document.location.protocol?\"https://ssl\":\"http://www\")+\".google-analytics.com/ga.js\";var s=document.getElementsByTagName(\"script\")[0];s.parentNode.insertBefore(ga,s)})();</script>" . PHP_EOL;
 }
 $footer .= "<script type=\"text/javascript\" src=\"".HLJS_JS."\"></script>" . PHP_EOL;
-$footer .= "<script type=\"text/javascript\">
-$(\".highlight\").click(function(c){c.preventDefault();$(\".highlight\").attr(\"disabled\", \"disabled\");$(\"#source\").each(function(d, e){hljs.highlightBlock(e);});var b = $(\"code\").css(\"background-color\");$(\"pre\").css(\"background-color\", b);});</script>" . PHP_EOL;
+$footer .= "<script type=\"text/javascript\">$(\".highlight\").click(function(c){c.preventDefault();$(\".highlight\").attr(\"disabled\", \"disabled\");$(\"#source\").each(function(d, e){hljs.highlightBlock(e);});var b = $(\"code\").css(\"background-color\");$(\"pre\").css(\"background-color\", b);});$(\"modal\").on(\"hidden.bs.modal\", function(){$(\"highlight\").removeAttr(\"disabled\");});</script>" . PHP_EOL;
 
 // Set breadcrumbs
 $breadcrumbs = null;
@@ -816,7 +815,7 @@ if (GIVE_KUDOS) {
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             <a class="btn btn-primary fullview" role="button">View</a>
-            <button class="btn btn-success highlight hidden pull-left" title="Apply syntax highlighting">Highlight</button>
+            <button class="btn btn-success highlight pull-left" title="Apply syntax highlighting">Highlight</button>
           </div>
         </div>
       </div>
