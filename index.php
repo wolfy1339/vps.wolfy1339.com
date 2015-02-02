@@ -778,7 +778,7 @@ if (GIVE_KUDOS) {
 <?php echo $header?>
 </head>
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <ol class="breadcrumb">
 <?php echo $breadcrumbs?>
     </ol>
