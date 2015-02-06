@@ -220,7 +220,7 @@ if (DOC_ICONS == 'fontawesome') {
         'ebook'     => array('aeh','azw','ceb','chm','epub','fb2','ibooks','kf8','lit','lrf','lrx','mobi','pdb','pdg','prc','xeb'),
         'email'     => array('eml','emlx','mbox','msg','pst'),
         'feed'      => array('atom','rss'),
-        'font'      => array('eot','fon','otf','pfm','ttf','woff'),
+        'font'      => array('eot','fon','otf','pfm','ttf','woff', 'woff2'),
         'image'     => array('ai','bmp','cdr','emf','eps','gif','icns','ico','jp2','jpe','jpeg','jpg','jpx','pcx','pict','png','psd','psp','svg','tga','tif','tiff','webp','wmf'),
         'link'      => array('lnk','url','webloc'),
         'linux'     => array('bin','deb','rpm'),

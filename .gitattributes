@@ -21,8 +21,10 @@
 *.deb binary
 powder* binary
 *.gz binary
+*.7z binary
+*.zip binary
 *.eot binary
 *.woff binary
-*.woff binary
+*.woff2 binary
 *.otf binary
 *.ttf binary
