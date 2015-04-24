@@ -11,16 +11,16 @@ if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
 $json = file_get_contents('php://input');
 $data = json_decode($json, true);
 if ($ip >= $ip_low && $ip <= $ip_high) {
-    if ($data['repository.name'] == "TPT-NodeJS") {    
-        shell_exec("cd /root/TPT && /usr/bin/git pull 2>&1");
-        shell_exec("/usr/bin/npm install 2>&1");
+    if ($data['repository.name'] == 'TPT-NodeJS') {    
+        shell_exec('cd /root/TPT && /usr/bin/git pull 2>&1');
+        shell_exec('/usr/bin/npm install 2>&1');
     } else {
-        shell_exec("cd /var/www && /usr/bin/git pull 2>&1");
+        shell_exec('cd /var/www && /usr/bin/git pull 2>&1');
     }
 } else {
     include '403.php';
-    header("HTTP/1.1 403 Forbidden");
-    header("Status: 403 Your IP is not on our list; bugger off", true, 403);
+    header($_SERVER['SERVER_PROTOCOL'].' 403 Forbidden');
+    header('Status: 403 Your IP is not on our list; bugger off', true, 403);
 }
 exit()
 ?>
