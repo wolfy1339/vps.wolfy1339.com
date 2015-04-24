@@ -9,6 +9,6 @@ $(".highlight").click(function (c) {
 });
 
 $(".modal").on("hidden.bs.modal", function () {
-    $("highlight").removeAttr("disabled");
+    $(".highlight").removeAttr("disabled");
 });
 
