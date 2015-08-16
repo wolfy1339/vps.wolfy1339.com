@@ -19,6 +19,7 @@
 *.jpg binary
 *.exe binary
 *.deb binary
+*.ico binary
 powder* binary
 *.gz binary
 *.7z binary
