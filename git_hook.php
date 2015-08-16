@@ -12,6 +12,8 @@ if ($ip >= $ip_low && $ip <= $ip_high) {
     if ($data['repository.name'] == 'TPT-NodeJS') {    
         shell_exec('cd /root/TPT && /usr/bin/git pull 2>&1');
         shell_exec('/usr/bin/npm install 2>&1');
+    } elseif ($data['repository.name'] == 'files.brilliant-minds.tk') {
+        shell_exec('cd /var/www/BMN && /usr/bin/git pull 2>&1');
     } else {
         shell_exec('cd /var/www/html && /usr/bin/git pull 2>&1');
     }
