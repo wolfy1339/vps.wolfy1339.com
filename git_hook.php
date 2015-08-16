@@ -1,10 +1,8 @@
 <?php error_reporting(E_ERROR);
 $ip_low = ip2long("192.30.252.0");
 $ip_high = ip2long("192.30.255.255");
-if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+if (!empty($SERVER['HTTP_CLIENT_IP'])) {
     $ip = ip2long($_SERVER['HTTP_CLIENT_IP']);
-} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-    $ip = ip2long($_SERVER['HTTP_X_FORWARDED_FOR']);
 } else {
     $ip = ip2long($_SERVER['REMOTE_ADDR']);
 }
