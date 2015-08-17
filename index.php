@@ -16,7 +16,7 @@
 /*** SETTINGS ***/
 
 // Set Bootstrap version
-define('BOOTSTRAP_VERSION', '3.3.2');
+define('BOOTSTRAP_VERSION', 'latest');
 
 /* Table Styles (can be combined, e.g. 'table-hover table-striped')
  *     'table-hover' - enable a hover state on table rows (default)
@@ -312,7 +312,7 @@ if ($handle = opendir('.'))
             if (DOC_ICONS == 'fontawesome') {
                 $folder_icon = 'fa fa-folder ' . FONTAWESOME_STYLE;
                 if(in_array($item['lext'], $filetype['archive'])){
-                    $item['class'] = 'fa fa-archive ' . FONTAWESOME_STYLE;
+                    $item['class'] = 'fa fa-file-archive-o ' . FONTAWESOME_STYLE;
                 }elseif(in_array($item['lext'], $filetype['apple'])){
                     $item['class'] = 'fa fa-apple ' . FONTAWESOME_STYLE;
                 }elseif(in_array($item['lext'], $filetype['audio'])){
@@ -338,7 +338,7 @@ if ($handle = opendir('.'))
                 }elseif(in_array($item['lext'], $filetype['font'])){
                     $item['class'] = 'fa fa-font ' . FONTAWESOME_STYLE;
                 }elseif(in_array($item['lext'], $filetype['image'])){
-                    $item['class'] = 'fa fa-picture-o ' . FONTAWESOME_STYLE;
+                    $item['class'] = 'fa fa-file-image-o ' . FONTAWESOME_STYLE;
                 }elseif(in_array($item['lext'], $filetype['link'])){
                     $item['class'] = 'fa fa-link ' . FONTAWESOME_STYLE;
                 }elseif(in_array($item['lext'], $filetype['linux'])){
@@ -348,11 +348,11 @@ if ($handle = opendir('.'))
                 }elseif(in_array($item['lext'], $filetype['raw'])){
                     $item['class'] = 'fa fa-camera ' . FONTAWESOME_STYLE;
                 }elseif(in_array($item['lext'], $filetype['script'])){
-                    $item['class'] = 'fa fa-code ' . FONTAWESOME_STYLE;
+                    $item['class'] = 'fa fa-file-code-o ' . FONTAWESOME_STYLE;
                 }elseif(in_array($item['lext'], $filetype['text'])){
                     $item['class'] = 'fa fa-file-text-o ' . FONTAWESOME_STYLE;
                 }elseif(in_array($item['lext'], $filetype['video'])){
-                    $item['class'] = 'fa fa-film ' . FONTAWESOME_STYLE;
+                    $item['class'] = 'fa fa-file-video-o ' . FONTAWESOME_STYLE;
                 }elseif(in_array($item['lext'], $filetype['website'])){
                     $item['class'] = 'fa fa-globe ' . FONTAWESOME_STYLE;
                 }elseif(in_array($item['lext'], $filetype['windows'])){
