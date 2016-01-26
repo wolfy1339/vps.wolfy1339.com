@@ -1,0 +1,73 @@
+==================================================================
+https://keybase.io/wolfy1339
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://wolfy1339.tk
+  * I am wolfy1339 (https://keybase.io/wolfy1339) on keybase.
+  * I have a public key with fingerprint 848A 575D 0C0D 97EB 41DA  1FF9 D9AC 1B18 57B7 E82A
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "010130d3faa805d97363ce6af2b6b6c44e7709655e087a9d9feb6de567affa8e50370a",
+            "fingerprint": "848a575d0c0d97eb41da1ff9d9ac1b1857b7e82a",
+            "host": "keybase.io",
+            "key_id": "d9ac1b1857b7e82a",
+            "kid": "010130d3faa805d97363ce6af2b6b6c44e7709655e087a9d9feb6de567affa8e50370a",
+            "uid": "04cc22d2e695b5cba719408847c43719",
+            "username": "wolfy1339"
+        },
+        "service": {
+            "hostname": "wolfy1339.tk",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1453768567,
+    "expire_in": 157680000,
+    "prev": "58bfab73ca68ff3c0d0a68516bda4ac328785cc1e2a6b2f13b5f40b18caff7a6",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owGtUmtMHFUU3gegULEogk0LIUwUbQt0Zue5S20g1iqkkEgoUCCsd2buLJNdZ7a7
+wyKlyKOmFKUBWrtR2ZSksS0pIE03QpCWQttg0oLPFrv1GR61ijy0LQbR4l3UP8af
+3j/33HO/77vnfPe0RBp1Bn2ga8O6gr7bm/RXf+B1+Scv1FZhvCpWYpYqzA5XN+gQ
+oVuz2mURs2A4gRMkLpISABxOi2aWZEgBMkAy8QzPCBQFWRY3MzQNcY4FZtEsQZ4R
+Ic2wQJIAB2mcZHGAJWOSrNigy+mSFQ3JchQHaJYWcQFHmpCnCBEQkoT4QCB4gqNZ
+noWcKUgsU91BBiqOB26YKqsohw7W1fL+A/8/113+lxwlCCaTaIKMmeZpgQcsYaZw
+jqNYgSJRHAS6oUsBL0OErlAdUiVBkmasOhlDaY8swKCzwVb+DUnV7IjsdKmaKqgO
+dFOmaU5LkKhVOleRkLf+rWHlZUVEPiKCB7rcsqpgFgIhBU0OihIUTbIMh3pIxuAr
+TtkFrXIQQaMkjlbwGehBkjTHS4BnC0kBMJwkkegTcBTRBMOLgAICaeJYjhYEApoA
+w5skguRpicKRzwJyhwUMFmxrj6JiFhLVCWxI0y3bFKCVuyBWHdFoiAvR6Q26sFBD
+cMJ0EeFR/4zdjta1KzYtbXRL/9mhW6xvOD0pNvZi4ncxxnjDQKl0d/7eZb83q/S6
+2fnGE2f21Jwf7TD5nNk17l3DV3fcGJMDcf7nrr2W1XBvytt1JIZMabZ/VVVrbPLl
+zg6FLdU1vm9zpLtfNBCB4g/DYytmUnKvW6NjPZeg/Z0tA2rM3uqSGvipzxE6HbO7
+97MvF59/nRr5WmyKmsxkCk9PZlyZ693ZvjxMl/Bi7gebD1OHXrr9y6U19fvGHms/
+bCusq/B4F+7n+LvCIjLzH5+qMNZG5+Sem9+8bU3VrcFrWSCQmTTR5o2/Uf6z4uu7
+Ux/ZsjiRHbF3xRl5imlTErdJ/VeaJtneVvzZHl3HI7aFue3qeM7IPPamktkx3t37
+6FvHtj7V9dBHX9wFGy7/uOk982+6hrXt0wfOC8eY70dOawU5R6J2658ZPflTS9qJ
+DM/4iegQ4/hEfmK87+3f5fXljKtotrOzKsO/lPBHwGM5vr97jN9aVJm31E/0JHxz
+p7NEnYjMs7TsS16p8Q/2pHsLxDO7Pjk+4vHsbCguK97/Ob0x5OHmxaMvnJtbd7Ne
+uxB3sHCjPenQq43f1s4ML7dOaIFfEwbpJx0ppU8fLT7V98BIWR397uyB8Pbp5rPr
+Hyyq6O2ezhus97Bx+sCyUgQW7jtSi8MG/PXp5Rfbts+kZRvtQwlLsR9PHdQvhOaF
+3Ez9Ew==
+=MT06
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/wolfy1339
+
+==================================================================
