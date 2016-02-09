@@ -634,7 +634,7 @@ if (RESPONSIVE_TABLE) {
 
 // Set table header
 $table_header  = null;
-$table_header .= "            <th class=\"col-lg-8 text-left\" data-sort=\"string\">Name</th>";
+$table_header .= "            <th class=\"col-lg-8 text-left\" data-sort=\"string\">Name&nbsp;<i class=\"fa fa-lg fa-sort\"></i></th>";
 
 if ($table_options['size']) {
     $table_header .= "            <th";
@@ -643,7 +643,7 @@ if ($table_options['size']) {
     } else {
         $table_header .= ">";
     }
-    $table_header .= "Size</th>" . PHP_EOL;
+    $table_header .= "Size&nbsp;<i class=\"fa fa-lg fa-sort\"></i></th>" . PHP_EOL;
 }
 
 if ($table_options['age']) {
@@ -653,7 +653,7 @@ if ($table_options['age']) {
     } else {
         $table_header .= ">";
     }
-    $table_header .= "Modified</th>" . PHP_EOL;
+    $table_header .= "Modified&nbsp;<i class=\"fa fa-lg fa-sort\"></i></th>" . PHP_EOL;
 }
 
 // Set table body
