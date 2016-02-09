@@ -1,6 +1,6 @@
-$(".highlight").click(function (c) {
+$(".highlight").click(function(c) {
     c.preventDefault();
-    $(".highlight").attr("disabled", "disabled");
+    $(this).attr("disabled", "disabled");
     $("#source").each(function(e) {
         hljs.highlightBlock(e);
     });
@@ -11,4 +11,13 @@ $(".highlight").click(function (c) {
 $(".modal").on("hidden.bs.modal", function () {
     $(".highlight").removeAttr("disabled");
 });
-
+$("th").click(function() {
+    var asc = $(this).hasClass("sorting-asc");
+    var desc = $(this).hasClass("sorting-desc");
+    $("th .fa").removeClass("fa-sort-asc").removeClass("fa-sort-desc");
+    if (asc) {
+        $(this).find(".fa").addClass("fa-sort-asc");
+    } else if (desc) {
+        $(this).find(".fa").addClass("fa-sort-desc");
+    }
+});
