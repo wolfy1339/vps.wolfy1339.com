@@ -105,16 +105,16 @@ define('FONTAWESOME_STYLE','fa-lg');
     define('JQ_SEARCHER', '//cdnjs.cloudflare.com/ajax/libs/jquery-searcher/0.2.0/jquery.searcher.min.js');
 
 // Browser and Device Icons
-          define('FAV_ICON', 'http://wolfy1339.tk/img/favicon16.png'); // 16x16
-          define('FAV_ICON_32', 'http://wolfy1339.tk/img/favicon32.png'); // 32x32
-          define('FAV_ICON_48', 'http://wolfy1339.tk/img/favicon48.png'); // 48x48
-          define('FAV_ICON_76', 'http://wolfy1339.tk/img/favicon76.png'); // 76x76
-          define('FAV_ICON_120', 'http://wolfy1339.tk/img/favicon120.png'); // 120x120
-          define('FAV_ICON_152', 'http://wolfy1339.tk/img/favicon152.png'); // 152x152
-       define('IPHONE_ICON', 'http://wolfy1339.tk/img/favicon57.png'); // 57x57
-define('IPHONE_ICON_RETINA', 'http://wolfy1339.tk/img/favicon114.png'); // 114x114 
-         define('IPAD_ICON', 'http://wolfy1339.tk/img/favicon72.png'); // 72x72
-  define('IPAD_ICON_RETINA', 'http://wolfy1339.tk/img/favicon144.png'); // 144x144
+          define('FAV_ICON', '//wolfy1339.com/img/favicon16.png'); // 16x16
+          define('FAV_ICON_32', '//wolfy1339.com/img/favicon32.png'); // 32x32
+          define('FAV_ICON_48', '//wolfy1339.com/img/favicon48.png'); // 48x48
+          define('FAV_ICON_76', '//wolfy1339.tk/img/favicon76.png'); // 76x76
+          define('FAV_ICON_120', '//wolfy1339.com/img/favicon120.png'); // 120x120
+          define('FAV_ICON_152', '//wolfy1339.com/img/favicon152.png'); // 152x152
+       define('IPHONE_ICON', '//wolfy1339.com/img/favicon57.png'); // 57x57
+define('IPHONE_ICON_RETINA', '//wolfy1339.com/img/favicon114.png'); // 114x114 
+         define('IPAD_ICON', '//wolfy1339.com/img/favicon72.png'); // 72x72
+  define('IPAD_ICON_RETINA', '//wolfy1339.com/img/favicon144.png'); // 144x144
   define('METRO_TILE_COLOR', ''); //
   define('METRO_TILE_IMAGE', ''); // 144x144
 
@@ -634,7 +634,7 @@ if (RESPONSIVE_TABLE) {
 
 // Set table header
 $table_header  = null;
-$table_header .= "            <th class=\"col-lg-8 text-left\" data-sort=\"string\">Name</th>";
+$table_header .= "            <th class=\"col-lg-8 text-left\" data-sort=\"string\">Name&nbsp;<i class=\"fa fa-lg fa-sort\"></i></th>";
 
 if ($table_options['size']) {
     $table_header .= "            <th";
@@ -643,7 +643,7 @@ if ($table_options['size']) {
     } else {
         $table_header .= ">";
     }
-    $table_header .= "Size</th>" . PHP_EOL;
+    $table_header .= "Size&nbsp;<i class=\"fa fa-lg fa-sort\"></i></th>" . PHP_EOL;
 }
 
 if ($table_options['age']) {
@@ -653,7 +653,7 @@ if ($table_options['age']) {
     } else {
         $table_header .= ">";
     }
-    $table_header .= "Modified</th>" . PHP_EOL;
+    $table_header .= "Modified&nbsp;<i class=\"fa fa-lg fa-sort\"></i></th>" . PHP_EOL;
 }
 
 // Set table body
