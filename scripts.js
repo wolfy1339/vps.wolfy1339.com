@@ -11,13 +11,18 @@ $(".highlight").click(function(c) {
 $(".modal").on("hidden.bs.modal", function () {
     $(".highlight").removeAttr("disabled");
 });
-$("th").click(function() {
+$("th").on('click', function() {
+    $("th .fa").removeClass("fa-sort-asc fa-sort-desc").addClass("fa-sort");
+
+    var fa = $(this).find(".fa");
     var asc = $(this).hasClass("sorting-asc");
     var desc = $(this).hasClass("sorting-desc");
-    $("th .fa").removeClass("fa-sort-asc").removeClass("fa-sort-desc");
-    if (asc) {
-        $(this).find(".fa").addClass("fa-sort-asc");
-    } else if (desc) {
-        $(this).find(".fa").addClass("fa-sort-desc");
+    if (desc) {
+        fa.removeClass("fa-sort-desc").addClass("fa-sort-asc");
+    } else if (asc) {
+        fa.addClass("fa-sort-desc").removeClass("fa-sort-asc");
+    } else {
+        // Add the icon class
+        fa.addClass("fa-sort-asc").removeClass("fa-sort");
     }
 });
