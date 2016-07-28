@@ -36,7 +36,7 @@ if ($ip >= $ip_low && $ip <= $ip_high) {
                     "X-Auth-Key: ".$CF_API_KEY,
                     "Content-Type: application/json"
                 )
-            )
+            );
             curl_setopt_array($curl, $curl_opt);
             curl_exec($curl);
             curl_close($curl);
