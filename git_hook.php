@@ -49,7 +49,7 @@ if ($ip >= $ip_low && $ip <= $ip_high) {
 
         if ($CF_DO_PURGE) {
             $CF_ZONE_ID = "";
-            do_cloudflare_purge($CF_EMAIL, $CF_API, $CF_ZONE_ID, $data)
+            do_cloudflare_purge($CF_EMAIL, $CF_API, $CF_ZONE_ID, $data);
         }
     }
 } else {
