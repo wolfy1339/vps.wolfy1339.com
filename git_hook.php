@@ -42,7 +42,7 @@ if ($ip >= $ip_low && $ip <= $ip_high) {
         // Purge Cloudflare cache when a commit is pushed
         if ($CF_DO_PURGE) {
             $CF_ZONE_ID = "f1539009d9ffaf171559ba86d48bcf17";
-            do_cloudflare_purge($CF_EMAIL, $CF_API, $CF_ZONE_ID, $data)
+            do_cloudflare_purge($CF_EMAIL, $CF_API, $CF_ZONE_ID, $data);
         }
     } else {
         shell_exec("/usr/bin/git -C /var/www/html pull");
