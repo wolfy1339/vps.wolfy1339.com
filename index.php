@@ -101,20 +101,20 @@ define('FONTAWESOME_STYLE','fa-lg');
     define('BOOTSTRAPJS', '/Resources/js/bootstrap.min.js');
     define('HLJS_CSS', '/Resources/css/github.css');
     define('HLJS_JS', '/Resources/js/highlight.pack.js');
-    define('STUPIDTABLE', '//cdnjs.cloudflare.com/ajax/libs/stupidtable/0.0.1/stupidtable.js');
-    define('JQ_SEARCHER', '//cdnjs.cloudflare.com/ajax/libs/jquery-searcher/0.2.0/jquery.searcher.min.js');
+    define('STUPIDTABLE', 'https://cdnjs.cloudflare.com/ajax/libs/stupidtable/0.0.1/stupidtable.js');
+    define('JQ_SEARCHER', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-searcher/0.2.0/jquery.searcher.min.js');
 
 // Browser and Device Icons
-          define('FAV_ICON', '//wolfy1339.com/img/favicon16.png'); // 16x16
-          define('FAV_ICON_32', '//wolfy1339.com/img/favicon32.png'); // 32x32
-          define('FAV_ICON_48', '//wolfy1339.com/img/favicon48.png'); // 48x48
-          define('FAV_ICON_76', '//wolfy1339.tk/img/favicon76.png'); // 76x76
-          define('FAV_ICON_120', '//wolfy1339.com/img/favicon120.png'); // 120x120
-          define('FAV_ICON_152', '//wolfy1339.com/img/favicon152.png'); // 152x152
-       define('IPHONE_ICON', '//wolfy1339.com/img/favicon57.png'); // 57x57
-define('IPHONE_ICON_RETINA', '//wolfy1339.com/img/favicon114.png'); // 114x114 
-         define('IPAD_ICON', '//wolfy1339.com/img/favicon72.png'); // 72x72
-  define('IPAD_ICON_RETINA', '//wolfy1339.com/img/favicon144.png'); // 144x144
+          define('FAV_ICON', 'https://wolfy1339.com/img/favicon16.png'); // 16x16
+          define('FAV_ICON_32', 'https://wolfy1339.com/img/favicon32.png'); // 32x32
+          define('FAV_ICON_48', 'https://wolfy1339.com/img/favicon48.png'); // 48x48
+          define('FAV_ICON_76', 'https://wolfy1339.tk/img/favicon76.png'); // 76x76
+          define('FAV_ICON_120', 'https://wolfy1339.com/img/favicon120.png'); // 120x120
+          define('FAV_ICON_152', 'https://wolfy1339.com/img/favicon152.png'); // 152x152
+       define('IPHONE_ICON', 'https://wolfy1339.com/img/favicon57.png'); // 57x57
+define('IPHONE_ICON_RETINA', 'https://wolfy1339.com/img/favicon114.png'); // 114x114 
+         define('IPAD_ICON', 'https://wolfy1339.com/img/favicon72.png'); // 72x72
+  define('IPAD_ICON_RETINA', 'https://wolfy1339.com/img/favicon144.png'); // 144x144
   define('METRO_TILE_COLOR', ''); //
   define('METRO_TILE_IMAGE', ''); // 144x144
 
@@ -773,7 +773,7 @@ if (GIVE_KUDOS) {
 
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <?php echo $header?>
 </head>
