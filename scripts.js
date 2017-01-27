@@ -12,7 +12,7 @@ $(".modal").on("hidden.bs.modal", function () {
     $(".highlight").removeAttr("disabled");
 });
 $("th").on('click', function() {
-    $("th .fa").removeClass("fa-sort-asc fa-sort-desc").addClass("fa-sort");
+    $("th").find(".fa").removeClass("fa-sort-asc fa-sort-desc").addClass("fa-sort");
 
     var fa = $(this).find(".fa");
     var asc = $(this).hasClass("sorting-asc");
