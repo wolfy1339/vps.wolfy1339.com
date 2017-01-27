@@ -783,6 +783,7 @@ if (GIVE_KUDOS) {
 <?php echo $breadcrumbs?>
     </ol>
 <?php echo $search?>
+    <noscript class="alert alert-warning">Your browser does not support JavaScript or it is disabled. For optimal viewing of this page, JavaScript is required</noscript>
 <?php echo $responsive_open?>
       <table id="bs-table" class="table <?php echo TABLE_STYLE?>">
         <thead>
