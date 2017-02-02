@@ -6,7 +6,7 @@ if (!empty($SERVER["HTTP_CLIENT_IP"])) {
 } else {
     $ip = ip2long($_SERVER["REMOTE_ADDR"]);
 }
-$CF_DO_PURGE = False;
+$CF_DO_PURGE = True;
 
 function do_cloudflare_purge($email, $api_key, $zone_id, $file_array) {
     $CF_PURGE_URL = 'https://api.cloudflare.com/client/v4/zones/'.$zone_id.'/purge_cache';
@@ -26,6 +26,9 @@ function do_cloudflare_purge($email, $api_key, $zone_id, $file_array) {
     curl_close($curl);
 }
 if ($ip >= $ip_low && $ip <= $ip_high) {
+    $webHookJSON = file_get_contents("php://input");
+    $webHookData = json_decode($webHookJSON, true);
+
     if ($CF_DO_PURGE) {
         $CF_EMAIL = file_get_contents("../BMN/email");
         $CF_API = openssl_digest(openssl_digest(openssl_digest(file_get_contents("../BMN/cloudflare"), 'sha512'), 'sha512'), 'sha512');
@@ -34,21 +37,27 @@ if ($ip >= $ip_low && $ip <= $ip_high) {
         $data = json_encode(array_merge($removed, $modified));
     }
 
-    $webHookJSON = file_get_contents("php://input");
-    $webHookData = json_decode($webHookJSON, true);
     if ($webHookData["repository"]["name"] == "BMN-Files") {
         shell_exec("/usr/bin/git -C /var/www/BMN pull");
 
         // Purge Cloudflare cache when a commit is pushed
         if ($CF_DO_PURGE) {
             $CF_ZONE_ID = "f1539009d9ffaf171559ba86d48bcf17";
+            foreach($data as &$value) {
+                $value = "http://files.brilliant-minds.tk/".$value;
+            }
+            unset($value);
             do_cloudflare_purge($CF_EMAIL, $CF_API, $CF_ZONE_ID, $data);
         }
     } else {
         shell_exec("/usr/bin/git -C /var/www/html pull");
 
         if ($CF_DO_PURGE) {
-            $CF_ZONE_ID = "";
+            $CF_ZONE_ID = "815d413ab92fd4066266c2559a22a3af";
+            foreach($data as &$value) {
+                $value = "http://vps.wolfy1339.com/".$value;
+            }
+            unset($value);
             do_cloudflare_purge($CF_EMAIL, $CF_API, $CF_ZONE_ID, $data);
         }
     }
