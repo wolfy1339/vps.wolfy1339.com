@@ -1,15 +1,15 @@
-$(".highlight").click(function(c) {
+$(".highlight").on('click', function(c) {
     c.preventDefault();
     $(this).attr("disabled", "disabled");
-    $("#source").each(function(e) {
-        hljs.highlightBlock(e);
+    $("#source").each(function(i, block) {
+        hljs.highlightBlock(block);
     });
     var b = $("code").css("background-color");
     $("pre").css("background-color", b);
 });
 
-$(".modal").on("hidden.bs.modal", function () {
-    $(".highlight").removeAttr("disabled");
+$(".modal").on("hidden.bs.modal", function() {
+    $(this).find(".highlight").removeAttr("disabled");
 });
 $("th").on('click', function() {
     $("th").find(".fa").removeClass("fa-sort-asc fa-sort-desc").addClass("fa-sort");
