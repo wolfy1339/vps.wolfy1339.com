@@ -14,7 +14,9 @@ function do_cloudflare_purge($email, $api_key, $zone_id, $file_array) {
     $curl_opt = array(
         CURLOPT_URL => $CF_PURGE_URL,
         CURLOPT_CUSTOMREQUEST => "DELETE",
-        CURLOPT_POSTFIELDS => $file_array,
+        CURLOPT_POSTFIELDS => json_encode(array(
+            "files" => $file_array
+        ));
         CURLOPT_HTTPHEADER => array(
             "X-Auth-Email: ".$email,
             "X-Auth-Key: ".$api_key,
@@ -34,7 +36,7 @@ if ($ip >= $ip_low && $ip <= $ip_high) {
         $CF_API = file_get_contents("../cloudflare_api");
         $removed = $webHookData['removed'];
         $modified = $webHookData['modified'];
-        $data = json_encode(array_merge($removed, $modified));
+        $data = array_merge($removed, $modified);
     }
 
     if ($webHookData["repository"]["name"] == "BMN-Files") {
