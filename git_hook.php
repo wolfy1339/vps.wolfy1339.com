@@ -30,8 +30,8 @@ if ($ip >= $ip_low && $ip <= $ip_high) {
     $webHookData = json_decode($webHookJSON, true);
 
     if ($CF_DO_PURGE) {
-        $CF_EMAIL = file_get_contents("../BMN/email");
-        $CF_API = openssl_digest(openssl_digest(openssl_digest(file_get_contents("../BMN/cloudflare"), 'sha512'), 'sha512'), 'sha512');
+        $CF_EMAIL = file_get_contents("../email");
+        $CF_API = file_get_contents("../cloudflare_api");
         $removed = $webHookData['removed'];
         $modified = $webHookData['modified'];
         $data = json_encode(array_merge($removed, $modified));
