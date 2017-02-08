@@ -16,7 +16,7 @@ function do_cloudflare_purge($email, $api_key, $zone_id, $file_array) {
         CURLOPT_CUSTOMREQUEST => "DELETE",
         CURLOPT_POSTFIELDS => json_encode(array(
             "files" => $file_array
-        ));
+        )),
         CURLOPT_HTTPHEADER => array(
             "X-Auth-Email: ".$email,
             "X-Auth-Key: ".$api_key,
