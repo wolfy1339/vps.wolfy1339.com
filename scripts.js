@@ -26,3 +26,4 @@ $("th").on('click', function() {
         fa.addClass("fa-sort-asc").removeClass("fa-sort");
     }
 });
+$("#bs-table").stupidtable();
