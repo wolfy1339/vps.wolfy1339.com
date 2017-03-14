@@ -28,10 +28,9 @@ function do_cloudflare_purge($email, $api_key, $zone_id, $file_array) {
     curl_close($curl);
 }
 if ($ip >= $ip_low && $ip <= $ip_high) {
-    $webHookJSON = file_get_contents("php://input");
-    $webHookData = json_decode($webHookJSON, true);
-
     if ($CF_DO_PURGE) {
+        $webHookJSON = file_get_contents("php://input");
+        $webHookData = json_decode($webHookJSON, true);
         $CF_EMAIL = file_get_contents("../email");
         $CF_API = file_get_contents("../cloudflare_api");
         $removed = $webHookData['removed'];
