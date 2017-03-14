@@ -557,11 +557,11 @@ if (OG_LOCALE) $header = $header."  <meta property=\"og:locale\" content=\"".OG_
 if (OG_TYPE) $header = $header."  <meta property=\"og:type\" content=\"".OG_TYPE."\" />" . PHP_EOL;
 if (OG_IMAGE) $header = $header."  <meta property=\"og:image\" content=\"".OG_IMAGE."\" />" . PHP_EOL;
 
-$header = $header."  <link rel=\"stylesheet\" href=\"$bootstrap_cdn\" />" . PHP_EOL;
+$header = $header."  <link rel=\"stylesheet\" href=\"$bootstrap_cdn\"  integrity=\"sha384-ooESheBwfuVzOA62d6jnQnS4GjSBXDC/2o3m2qEn1hf9db0azBAgRnn8L09uMbma\" crossorigin=\"anonymous\"/>" . PHP_EOL;
 if (DOC_ICONS == "fontawesome" || DOC_ICONS == "fa-files") {
-    $header = $header."  <link rel=\"stylesheet\" href=\"".FONT_AWESOME."\" />" . PHP_EOL;
+    $header = $header."  <link rel=\"stylesheet\" href=\"".FONT_AWESOME."\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\"/>" . PHP_EOL;
 }
-$header = $header."  <link rel=\"stylesheet\" href=\"".HLJS_CSS."\" />" . PHP_EOL;
+$header = $header."  <link rel=\"stylesheet\" href=\"".HLJS_CSS."\" integrity=\"sha384-7NB9E7Or9cuJC4EZoyxzWbOqxhHKh5ZsEQXR9vZ7rNk6x37CFnLh5cinDpYkuCu1\" crossorigin=\"anonymous\"/>" . PHP_EOL;
 $modal_css = null;
 if (ENABLE_VIEWER) {
     $modal_css = ".modal img{display:block;margin:0 auto;max-width:100%}.modal video,.modal audio{width:100%}.viewer-wrapper{position:relative;padding-bottom:56.25%;height:0},.viewer-wrapper embed,.viewer-wrapper object{position:absolute;top:0;left:0;width:100%;height:100%}";
@@ -575,7 +575,7 @@ $header = $header."  <link href=\"//fonts.googleapis.com/css?family=".GOOGLE_FON
 $footer = null;
 $custom_js = null;
 if ( (ENABLE_SORT) || (ENABLE_VIEWER) || (ENABLE_SEARCH) ) {
-    $footer    .= "  <script type=\"text/javascript\" src=\"".JQUERY."\"></script>" . PHP_EOL;
+    $footer    .= "  <script type=\"text/javascript\" src=\"".JQUERY."\" integrity=\"sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ\" crossorigin=\"anonymous\"></script>" . PHP_EOL;
 }
 if (ENABLE_SORT) {
     $footer    .= "  <script type=\"text/javascript\" src=\"".STUPIDTABLE."\"></script>" . PHP_EOL;
@@ -586,17 +586,16 @@ if (ENABLE_SEARCH) {
     $custom_js .= "$(\"#bs-table\").searcher({inputSelector:\"#search\"});";
 }
 if (ENABLE_VIEWER) {
-    $footer    .= "  <script type=\"text/javascript\" src=\"".BOOTSTRAPJS."\"></script>" . PHP_EOL;
-    $hash       = "sha384-CXY0FWhiofl+fcyUEHRynx1tfHVEYgrBQS6gnfyhpIQGbI3napMWogFOPY9c2iGI";
-    $footer    .= "  <script type=\"text/javascript\" integrity=\"$hash\" crossorigin=\"anonymous\">$(\".audio-modal\").click(function(e){e.preventDefault();var t=$(this).attr(\"href\");$(\".modal-body\").empty().append('<audio src=\"'+t+'\" id=\"player\" autoplay controls>Your browser does not support the audio element.</audio>'),$(\".fullview\").attr(\"href\",t).text(\"Listen\"),$(\".modal-title\").text(decodeURIComponent(t)),$(\"#viewer-modal\").modal(\"show\")});$(\".flash-modal\").click(function(e){e.preventDefault();var t=$(this).attr(\"href\");$(\".modal-body\").empty().append('<div class=\"viewer-wrapper\"><object width=\"100%\" height=\"100%\" type=\"application/x-shockwave-flash\" data=\"'+t+'\"><param name=\"movie\" value=\"'+t+'\"><param name=\"quality\" value=\"high\"></object></div>'),$(\".fullview\").attr(\"href\",t).text(\"View\"),$(\".modal-title\").text(decodeURIComponent(t)),$(\"#viewer-modal\").modal(\"show\")});$(\".image-modal\").click(function(e){e.preventDefault();var t=$(this).attr(\"href\");$(\".modal-body\").empty().append('<img src=\"'+t+'\"/>'),$(\".fullview\").attr(\"href\",t).text(\"View\"),$(\".modal-title\").text(decodeURIComponent(t)),$(\"#viewer-modal\").modal(\"show\")});$(\".video-modal\").click(function(e){e.preventDefault();var t=$(this).attr(\"href\");$(\".modal-body\").empty().append('<video src=\"'+t+'\" id=\"player\" autoplay controls>Video format or MIME type is not supported</video>'),$(\".fullview\").attr(\"href\",t).text(\"View\"),$(\".modal-title\").text(decodeURIComponent(t)),$(\"#viewer-modal\").modal(\"show\")});$(\".quicktime-modal\").click(function(e){e.preventDefault();var t=$(this).attr(\"href\");$(\".modal-body\").empty().append('<div class=\"viewer-wrapper\"><embed width=\"100%\" height=\"100%\" src=\"'+t+'\" type=\"video/quicktime\" controller=\"true\" showlogo=\"false\" scale=\"aspect\"></div>'),$(\".fullview\").attr(\"href\",t).text(\"View\"),$(\".modal-title\").text(decodeURIComponent(t)),$(\"#viewer-modal\").modal(\"show\")});$(\".source-modal\").click(function(e){e.preventDefault();var t=$(this).attr(\"href\");$.ajax(t,{dataType:'text',success:function(data){\$(\".modal-body\").empty().append('<pre><code id=\"source\"></code></pre>');$(\"#source\").text(data);$(\".fullview\").attr(\"href\",t).text(\"View\"),$(\".modal-title\").text(decodeURIComponent(t)),$(\"#viewer-modal\").modal(\"show\")}})});$(\"#viewer-modal\").on(\"hide.bs.modal\",function(){var e=document.getElementById(\"player\");e&&e.pause()});</script>" . PHP_EOL;
+    $footer    .= "  <script type=\"text/javascript\" src=\"".BOOTSTRAPJS."\" integrity=\"sha384-11BkEKkLaZodUOvC3u6XmVZPUGl9CdsP3FgdD0jcPCO+2DWjzeZxvrwvelKOq+NX\" crossorigin=\"anonymous\"></script>" . PHP_EOL;
+    $footer    .= "  <script type=\"text/javascript\">$(\".audio-modal\").click(function(e){e.preventDefault();var t=$(this).attr(\"href\");$(\".modal-body\").empty().append('<audio src=\"'+t+'\" id=\"player\" autoplay controls>Your browser does not support the audio element.</audio>'),$(\".fullview\").attr(\"href\",t).text(\"Listen\"),$(\".modal-title\").text(decodeURIComponent(t)),$(\"#viewer-modal\").modal(\"show\")});$(\".flash-modal\").click(function(e){e.preventDefault();var t=$(this).attr(\"href\");$(\".modal-body\").empty().append('<div class=\"viewer-wrapper\"><object width=\"100%\" height=\"100%\" type=\"application/x-shockwave-flash\" data=\"'+t+'\"><param name=\"movie\" value=\"'+t+'\"><param name=\"quality\" value=\"high\"></object></div>'),$(\".fullview\").attr(\"href\",t).text(\"View\"),$(\".modal-title\").text(decodeURIComponent(t)),$(\"#viewer-modal\").modal(\"show\")});$(\".image-modal\").click(function(e){e.preventDefault();var t=$(this).attr(\"href\");$(\".modal-body\").empty().append('<img src=\"'+t+'\"/>'),$(\".fullview\").attr(\"href\",t).text(\"View\"),$(\".modal-title\").text(decodeURIComponent(t)),$(\"#viewer-modal\").modal(\"show\")});$(\".video-modal\").click(function(e){e.preventDefault();var t=$(this).attr(\"href\");$(\".modal-body\").empty().append('<video src=\"'+t+'\" id=\"player\" autoplay controls>Video format or MIME type is not supported</video>'),$(\".fullview\").attr(\"href\",t).text(\"View\"),$(\".modal-title\").text(decodeURIComponent(t)),$(\"#viewer-modal\").modal(\"show\")});$(\".quicktime-modal\").click(function(e){e.preventDefault();var t=$(this).attr(\"href\");$(\".modal-body\").empty().append('<div class=\"viewer-wrapper\"><embed width=\"100%\" height=\"100%\" src=\"'+t+'\" type=\"video/quicktime\" controller=\"true\" showlogo=\"false\" scale=\"aspect\"></div>'),$(\".fullview\").attr(\"href\",t).text(\"View\"),$(\".modal-title\").text(decodeURIComponent(t)),$(\"#viewer-modal\").modal(\"show\")});$(\".source-modal\").click(function(e){e.preventDefault();var t=$(this).attr(\"href\");$.ajax(t,{dataType:'text',success:function(data){\$(\".modal-body\").empty().append('<pre><code id=\"source\"></code></pre>');$(\"#source\").text(data);$(\".fullview\").attr(\"href\",t).text(\"View\"),$(\".modal-title\").text(decodeURIComponent(t)),$(\"#viewer-modal\").modal(\"show\")}})});$(\"#viewer-modal\").on(\"hide.bs.modal\",function(){var e=document.getElementById(\"player\");e&&e.pause()});$custom_js</script>" . PHP_EOL;
 } else {
     $footer    .= "  <script type=\"text/javascript\">$custom_js</script>" . PHP_EOL;
 }
 if (ANALYTICS_ID) {
     $footer    .= "  <script type=\"text/javascript\">var _gaq=_gaq||[];_gaq.push([\"_setAccount\",\"".ANALYTICS_ID."\"]);_gaq.push([\"_trackPageview\"]);(function(){var ga=document.createElement(\"script\");ga.type=\"text/javascript\";ga.async=true;ga.src=(\"https:\"==document.location.protocol?\"https://ssl\":\"http://www\")+\".google-analytics.com/ga.js\";var s=document.getElementsByTagName(\"script\")[0];s.parentNode.insertBefore(ga,s)})();</script>" . PHP_EOL;
 }
-$footer .= "<script type=\"text/javascript\" src=\"".HLJS_JS."\"></script>" . PHP_EOL;
-$footer .= "<script type=\"text/javascript\" src=\"/scripts.js\"></script>" . PHP_EOL;
+$footer .= "<script type=\"text/javascript\" src=\"".HLJS_JS."\" integrity=\"sha384-mUN8Dq0oi/Z9L3EfJbVwq9iZit0JOwaSOwcnUrGfc+gZbNScZWe7p+fEdYrox/Ki\" crossorigin=\"anonymous\"></script>" . PHP_EOL;
+$footer .= "<script type=\"text/javascript\" src=\"/scripts.js\" integrity=\"sha384-G/b+FdPWgQG+y7gRmhZbRIOIBdzFRaI0F6BnL0Jdgq2Pz8nM64iJg45OG77al8yV\" crossorigin=\"anonymous\"></script>" . PHP_EOL;
 
 // Set breadcrumbs
 $breadcrumbs = null;
