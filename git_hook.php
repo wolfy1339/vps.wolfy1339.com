@@ -35,7 +35,7 @@ if ($ip >= $ip_low && $ip <= $ip_high) {
     if ($CF_DO_PURGE) {
         $CF_EMAIL = file_get_contents("../email");
         $CF_API = file_get_contents("../cloudflare_api");
-        $head_commit = $webHookData['head_commit']
+        $head_commit = $webHookData['head_commit'];
         $removed = $head_commit['modified'];
         $modified = $head_commit['modified'];
         $files = array_unique(array_merge($removed, $modified));
