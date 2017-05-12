@@ -78,3 +78,8 @@
 .hljs-string {
     color: #183691;
 }
+.hljs::selection,
+.hljs ::selection {
+  background-color: #212121;
+  color: #fff;
+}
