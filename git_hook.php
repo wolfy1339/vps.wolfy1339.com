@@ -6,7 +6,7 @@ if (!empty($SERVER["HTTP_CLIENT_IP"])) {
 } else {
     $ip = ip2long($_SERVER["REMOTE_ADDR"]);
 }
-$CF_DO_PURGE = True;
+$CF_DO_PURGE = False;
 
 function do_cloudflare_purge($email, $api_key, $zone_id, $file_array) {
     $curl = curl_init();
