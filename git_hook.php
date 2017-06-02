@@ -30,13 +30,14 @@ function do_cloudflare_purge($email, $api_key, $zone_id, $file_array) {
     }
 }
 if ($ip >= $ip_low && $ip <= $ip_high) {
+    header("Content-Type: application/json; charset=utf-8");
     $webHookJSON = file_get_contents("php://input");
     $webHookData = json_decode($webHookJSON, true);
     if ($CF_DO_PURGE) {
         $CF_EMAIL = file_get_contents("../email");
         $CF_API = file_get_contents("../cloudflare_api");
         $head_commit = $webHookData['head_commit'];
-        $removed = $head_commit['modified'];
+        $removed = $head_commit['removed'];
         $modified = $head_commit['modified'];
         $files = array_unique(array_merge($removed, $modified));
     }
