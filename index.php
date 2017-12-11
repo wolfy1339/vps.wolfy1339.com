@@ -561,7 +561,7 @@ $header = $header."  <link rel=\"stylesheet\" href=\"$bootstrap_cdn\"  integrity
 if (DOC_ICONS == "fontawesome" || DOC_ICONS == "fa-files") {
     $header = $header."  <link rel=\"stylesheet\" href=\"".FONT_AWESOME."\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\"/>" . PHP_EOL;
 }
-$header = $header."  <link rel=\"stylesheet\" href=\"".HLJS_CSS."\" integrity=\"sha384-7NB9E7Or9cuJC4EZoyxzWbOqxhHKh5ZsEQXR9vZ7rNk6x37CFnLh5cinDpYkuCu1\" crossorigin=\"anonymous\"/>" . PHP_EOL;
+$header = $header."  <link rel=\"stylesheet\" href=\"".HLJS_CSS."\" integrity=\"sha384-udTCnexaTUvwwW/GHtvOWJXREm6SeIyUdmnw7jbeaZt75WQ0wyt1Z1MI+kvEYJUq\" crossorigin=\"anonymous\"/>" . PHP_EOL;
 $modal_css = null;
 if (ENABLE_VIEWER) {
     $modal_css = ".modal img{display:block;margin:0 auto;max-width:100%}.modal video,.modal audio{width:100%}.viewer-wrapper{position:relative;padding-bottom:56.25%;height:0},.viewer-wrapper embed,.viewer-wrapper object{position:absolute;top:0;left:0;width:100%;height:100%}";
